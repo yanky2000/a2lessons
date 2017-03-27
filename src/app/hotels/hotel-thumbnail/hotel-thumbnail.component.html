@@ -1,11 +1,11 @@
 <md-card 
   [ngClass]="{
-    'hotel-thumbnail':true, 
-    'active-hotel':mouseOverItem,
-    'odd-bgc':isOdd
-    }" 
+      'hotel-thumbnail':true, 
+      'active-hotel':mouseOverItem,
+      'odd-bgc':isOdd}" 
   (mouseover)="mouseOverItem=true" 
   (mouseleave)="mouseOverItem=false">
+  
   <h3>{{hotel.name}}</h3>
   <div class="hotel-thumbnail-content">
     <img [src]="hotel.imageUrl" alt="hotel.name">
@@ -14,4 +14,5 @@
       <p> TEL: {{hotel.tel}}, </p>
     </div>
   </div>
+  
 </md-card>

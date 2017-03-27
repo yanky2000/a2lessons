@@ -10,10 +10,6 @@ export class HotelsListComponent {
 
   leasureToSearch: any
 
-  public doFilter(term):void {
-    this.leasureToSearch = term
-  }
-
   @Input()
   hotels: Hotel[]
 
@@ -23,8 +19,12 @@ export class HotelsListComponent {
   @Output()
   hotelClicked = new EventEmitter()
 
-  hotelClickedHandler(hotelId:number) {
+  public hotelClickedHandler(hotelId:number) {
     this.hotelClicked.emit(hotelId)
+  }
+
+  public doFilter(term):void {
+    this.leasureToSearch = term
   }
 
 }
